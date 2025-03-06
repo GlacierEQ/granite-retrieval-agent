@@ -1,0 +1,21 @@
+{
+  "organization_criteria": {
+    "by_date": true,
+    "by_location": false,
+    "by_tags": true
+  },
+  "hierarchy": {
+    "year": {
+      "month": {
+        "day": {
+          "images": []
+        }
+      }
+    },
+    "tags": {
+      "tag_name": {
+        "images": []
+      }
+    }
+  }
+}

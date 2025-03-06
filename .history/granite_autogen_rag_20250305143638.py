@@ -2,20 +2,21 @@
 requirements:  ag2==0.7.5, ag2[ollama]==0.7.05, crewai==0.102.0, crewai-tools==0.33.0, ollama
 """
 
-from typing import List
-from crewai import Agent, Task, LLM
+import logging
+from typing import Optional, Callable, Awaitable, List
+from crewai import Crew, Process, Agent, Task, LLM
 from crewai.tools import tool
 from fastapi import Request
 from ollama import Client as OllamaClient
+from open_webui.routers import retrieval
+from open_webui.models.knowledge import KnowledgeTable
 from open_webui import config as open_webui_config
 from pydantic import BaseModel, Field
 
-
 # Pruning Logic
-def prune_model(model):
+def prune_model(model, pruning_percentage):
     # Implement the pruning logic here
     pass
-
 
 class Pipe:
     class Valves(BaseModel):
